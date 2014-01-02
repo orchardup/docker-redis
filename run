@@ -1,0 +1,3 @@
+#!/bin/sh
+chown -R redis:redis /var/lib/redis
+exec sudo -u redis /usr/bin/redis-server
