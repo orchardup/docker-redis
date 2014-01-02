@@ -6,5 +6,5 @@ RUN apt-get update -qq
 RUN apt-get install -y redis-server=2:2.8.3-1chl1~precise1
 ADD run /usr/local/bin/run
 EXPOSE 6379
-#VOLUME ["/var/lib/redis"]
+VOLUME ["/var/lib/redis"]
 CMD ["/usr/local/bin/run"]
