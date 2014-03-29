@@ -1,3 +1,4 @@
 #!/bin/sh
+sysctl vm.overcommit_memory=1 > /dev/null
 chown -R redis:redis /var/lib/redis
 exec sudo -u redis /usr/bin/redis-server /etc/redis/redis.conf
